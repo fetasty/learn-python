@@ -1,4 +1,4 @@
-import unittest
+import unittest, asyncio
 from .learn_generator import *
 from .learn_coroutine import *
 
@@ -19,5 +19,10 @@ class GeneratorTest(unittest.TestCase):
 
 class CoroutineTest(unittest.TestCase):
   def test_consumer_producer(self):
+    # 日志校验
     c = consumer()
     self.assertEqual(producer(c), 6)
+
+  def test_async_consumer_producer(self):
+    # 日志校验
+    asyncio.run(async_consumer_producer_main())
