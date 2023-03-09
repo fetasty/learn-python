@@ -8,7 +8,14 @@
       "name": "Python: Module",
       "type": "python",
       "request": "launch",
-      "module": "basic",
+      "module": "async-server",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Module",
+      "type": "python",
+      "request": "launch",
+      "module": "basic-coroutine",
       "justMyCode": true
     }
   ]
