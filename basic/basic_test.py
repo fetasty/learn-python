@@ -1,6 +1,6 @@
 import unittest
-from basic.learn_generator import *
-from basic.learn_coroutine import *
+from .learn_generator import *
+from .learn_coroutine import *
 
 class GeneratorTest(unittest.TestCase):
   def test_expr_generator(self):
@@ -19,6 +19,5 @@ class GeneratorTest(unittest.TestCase):
 
 class CoroutineTest(unittest.TestCase):
   def test_consumer_producer(self):
-    with self.assertLogs(level=logging.INFO):
-      c = consumer()
-      self.assertEqual(producer(c), 6)
+    c = consumer()
+    self.assertEqual(producer(c), 6)

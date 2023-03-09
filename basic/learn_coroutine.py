@@ -1,6 +1,11 @@
 import logging, asyncio
+from pathlib import Path
 
-logging.basicConfig(format='%(asctime)s [%(levelname)5s]: %(message)s')
+logging.basicConfig(
+  format='%(asctime)s [%(levelname)5s]: %(message)s',
+  level=logging.DEBUG,
+  filename=f'{Path(__file__).name}.log'
+)
 
 def consumer():
   logging.info('-' * 5 +'consumer start')
@@ -25,4 +30,6 @@ def producer(c):
   # 调用close可以关闭生成器, 生成器将从最后的yield处退出, 而不会打印后面的exit日志
   # 也可send(None), 让生成器自然退出, 但是会抛出StopIteration异常需要处理
   c.close()
+  logging.info('-' * 5 +'producer exit')
   return r
+
