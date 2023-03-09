@@ -5,14 +5,21 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: Module",
+      "name": "Python: Module (learn-flask)",
+      "type": "python",
+      "request": "launch",
+      "module": "learn-flask",
+      "justMyCode": false
+    },
+    {
+      "name": "Python: Module (async-server)",
       "type": "python",
       "request": "launch",
       "module": "async-server",
       "justMyCode": true
     },
     {
-      "name": "Python: Module",
+      "name": "Python: Module (basic-coroutine)",
       "type": "python",
       "request": "launch",
       "module": "basic-coroutine",
