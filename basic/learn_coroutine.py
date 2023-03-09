@@ -15,6 +15,7 @@ def consumer():
 
 def producer(c):
   logging.info('-' * 5 + 'producer start')
+  r = 0
   # 使用send启动生成器, 必须传入参数None
   c.send(None)
   for i in range(3):
@@ -24,3 +25,4 @@ def producer(c):
   # 调用close可以关闭生成器, 生成器将从最后的yield处退出, 而不会打印后面的exit日志
   # 也可send(None), 让生成器自然退出, 但是会抛出StopIteration异常需要处理
   c.close()
+  return r

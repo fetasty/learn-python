@@ -21,4 +21,4 @@ class CoroutineTest(unittest.TestCase):
   def test_consumer_producer(self):
     with self.assertLogs(level=logging.INFO):
       c = consumer()
-      producer(c)
+      self.assertEqual(producer(c), 6)
