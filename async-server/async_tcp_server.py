@@ -9,7 +9,7 @@ logging.basicConfig(
   format='%(asctime)s [%(levelname)5s] [%(thread)s]: %(message)s'
 )
 
-class AsyncServer:
+class AsyncTCPServer:
   def __init__(self, port: int):
     self.__port = port
     self.__host = '0.0.0.0' # 在所有ip上监听
