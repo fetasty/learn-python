@@ -22,3 +22,10 @@ asyncio库也提供了基于协程的异步网络支持
 
 ## Web框架 flask
 
+**Hello Flask**
+
+按照 [flask中文网](https://flask.net.cn/) 上的说明, 创建虚拟环境, 安装Flask, 快速上手
+
+运行成功, 也能从控制台看到请求消息
+
+![Hello Flask](./screenshots/hello_flask.png)

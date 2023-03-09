@@ -5,11 +5,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: Module (learn-flask)",
+      "name": "Python: Module (Flask)",
       "type": "python",
       "request": "launch",
-      "module": "learn-flask",
-      "justMyCode": false
+      "module": "flask",
+      "args": ["run"],
+      "justMyCode": false,
+      "env": {
+        "FLASK_APP": "${workspaceFolder}/learn-flask/hello.py"
+      }
     },
     {
       "name": "Python: Module (async-server)",
