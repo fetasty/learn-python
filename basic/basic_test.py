@@ -1,7 +1,8 @@
 import unittest
-from learn_generator import *
+from basic.learn_generator import *
+from basic.learn_coroutine import *
 
-class BasicTest(unittest.TestCase):
+class GeneratorTest(unittest.TestCase):
   def test_expr_generator(self):
     r = [1, 2, 3, 4, 5]
     self.assertEqual(list(expr_generator(1, 6)), r)
@@ -16,5 +17,8 @@ class BasicTest(unittest.TestCase):
     r = [1, 1, 2, 3, 5, 8, 13]
     self.assertEqual(list(fib_generator(7)), r)
 
-if __name__ == '__main__':
-  unittest.main()
+class CoroutineTest(unittest.TestCase):
+  def test_consumer_producer(self):
+    with self.assertLogs(level=logging.INFO):
+      c = consumer()
+      producer(c)
